@@ -4,7 +4,7 @@
 cd docker && ./build.sh && cd -
 
 # Use the docker image to build the CentOS7 diskless images
-docker container run -ti --rm \
+docker container run -i --rm \
     --mount src=${PWD}/output,target=/output,type=bind \
     --mount src=centos7-builder,target=/centos7-builder,type=volume \
     --mount src=${PWD}/scripts,target=/scripts,type=bind \
